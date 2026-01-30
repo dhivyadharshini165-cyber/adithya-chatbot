@@ -25,7 +25,7 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 with open("college_data.json", "r") as f:
     college = json.load(f)
 
-COURSE_STATUS_FILE = "data/course_status.json"
+COURSE_STATUS_FILE = "course_status.json"
 if not os.path.exists(COURSE_STATUS_FILE):
     with open(COURSE_STATUS_FILE, "w") as f:
         json.dump({}, f)
@@ -301,4 +301,5 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
