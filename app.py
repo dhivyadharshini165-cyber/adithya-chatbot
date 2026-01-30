@@ -24,12 +24,6 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 # ===================== LOAD DATA =====================
 with open("college_data.json", "r") as f:
     college = json.load(f)
-
-COURSE_STATUS_FILE = "course_status.json"
-if not os.path.exists(COURSE_STATUS_FILE):
-    with open(COURSE_STATUS_FILE, "w") as f:
-        json.dump({}, f)
-
 # ===================== CHATBOT LOGIC (FIXED) =====================
 def chatbot_reply(user_msg, session, college):
     try:
@@ -301,5 +295,6 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
