@@ -22,7 +22,7 @@ GROQ_API_KEY = "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"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # ===================== LOAD DATA =====================
-with open("data/college_data.json", "r") as f:
+with open("college_data.json", "r") as f:
     college = json.load(f)
 
 COURSE_STATUS_FILE = "data/course_status.json"
@@ -301,3 +301,4 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
