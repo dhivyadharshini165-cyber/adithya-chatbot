@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Adithya College of Arts and Science</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI, Arial;
+background:#f5f7fb;
+}
+
+/* HERO */
+.hero{
+padding:90px 20px;
+text-align:center;
+background:linear-gradient(135deg,#020617,#ea580c);
+color:white;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.95;
+}
+
+/* SECTION */
+.section{
+max-width:1200px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.section h2{
+font-size:32px;
+color:#0f172a;
+margin-bottom:20px;
+}
+
+.section p{
+font-size:17px;
+line-height:1.8;
+color:#333;
+text-align:justify;
+}
+
+/* HIGHLIGHTS */
+.highlights{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+
+.card h3{
+color:#ea580c;
+margin-bottom:10px;
+}
+
+.card p{
+color:#444;
+font-size:16px;
+line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<h1>About Our College</h1>
+<p>Adithya College of Arts and Science</p>
+</div>
+
+<!-- ABOUT CONTENT -->
+<div class="section">
+
+<h2>Institution Overview</h2>
+<p>
+Adithya College of Arts and Science is a premier higher educational institution
+committed to academic excellence, holistic development, and career-oriented learning.
+The college provides quality education across Arts, Science, Commerce, and Management
+disciplines, nurturing students with strong academic foundations and ethical values.
+</p>
+
+<p>
+The institution aims to create a learner-centered environment where innovation,
+critical thinking, and practical knowledge are encouraged. With a dedicated team of
+experienced faculty members, Adithya College focuses on empowering students to meet
+global challenges and industry demands.
+</p>
+
+<h2>Vision</h2>
+<p>
+To become a center of academic excellence by providing quality education,
+fostering innovation, and shaping socially responsible and skilled graduates
+who contribute positively to society and the nation.
+</p>
+
+<h2>Mission</h2>
+<p>
+• To deliver high-quality education through effective teaching and learning practices.<br>
+• To promote research, innovation, and industry-oriented skills.<br>
+• To nurture ethical values, leadership qualities, and social responsibility among students.<br>
+• To prepare students for successful careers and lifelong learning.
+</p>
+
+<h2>Why Choose Adithya College?</h2>
+
+<div class="highlights">
+
+<div class="card">
+<h3>Academic Excellence</h3>
+<p>
+Well-structured curriculum aligned with university standards, supported by
+qualified faculty and modern teaching methodologies.
+</p>
+</div>
+
+<div class="card">
+<h3>Career-Oriented Education</h3>
+<p>
+Industry-focused programs, skill development initiatives, internships,
+and placement support for professional success.
+</p>
+</div>
+
+<div class="card">
+<h3>Modern Infrastructure</h3>
+<p>
+Smart classrooms, advanced laboratories, library resources,
+and digital learning facilities.
+</p>
+</div>
+
+<div class="card">
+<h3>Student-Centric Approach</h3>
+<p>
+Mentoring system, career guidance, extracurricular activities,
+and personality development programs.
+</p>
+</div>
+
+<div class="card">
+<h3>Ethics & Values</h3>
+<p>
+Emphasis on discipline, integrity, leadership,
+and social responsibility.
+</p>
+</div>
+
+<div class="card">
+<h3>AI-Enabled Learning</h3>
+<p>
+Integration of modern technologies such as AI-powered chatbots
+to enhance student support and information access.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

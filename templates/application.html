@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apply Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+font-family:Arial;
+background:#f4f6f8;
+display:flex;
+justify-content:center;
+padding:30px;
+}
+.form{
+background:white;
+width:420px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+input,select,button{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+button{
+background:#4f46e5;
+color:white;
+border:none;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form">
+<h2>Online Application</h2>
+
+<input id="name" placeholder="Student Name">
+<input id="email" placeholder="Email">
+<input id="phone" placeholder="Phone Number">
+
+<select id="course">
+<option>AI & ML</option>
+<option>Computer Science</option>
+<option>IT</option>
+<option>B.Com</option>
+<option>B.Sc</option>
+</select>
+
+<button onclick="apply()">Submit Application</button>
+</div>
+
+<script>
+function apply(){
+let apps = JSON.parse(localStorage.getItem("applications")||"[]");
+
+let app = {
+id: apps.length+1,
+name: name.value,
+email: email.value,
+phone: phone.value,
+course: course.value,
+date: new Date().toLocaleDateString()
+};
+
+apps.push(app);
+localStorage.setItem("applications",JSON.stringify(apps));
+localStorage.setItem("lastApp",JSON.stringify(app));
+
+location.href="/preview";
+}
+</script>
+
+</body>
+</html>

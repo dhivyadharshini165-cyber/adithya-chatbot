@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Placements & Achievements | Adithya College</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI, Arial;
+background:#f5f7fb;
+}
+
+/* HERO */
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#4f46e5);
+color:white;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* SECTION */
+.section{
+max-width:1200px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.section h2{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+color:#0f172a;
+}
+
+/* PLACEMENT STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-box{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.stat-box h3{
+font-size:36px;
+color:#4f46e5;
+margin:0;
+}
+
+.stat-box p{
+margin-top:10px;
+font-size:16px;
+color:#555;
+}
+
+/* COMPANIES */
+.company-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.company-card{
+background:white;
+padding:25px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+transition:0.4s;
+}
+
+.company-card:hover{
+transform:scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.company-card img{
+width:100%;
+max-height:80px;
+object-fit:contain;
+}
+
+/* ACHIEVEMENTS */
+.achievement-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.achievement-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+transition:0.4s;
+}
+
+.achievement-card:hover{
+transform:translateY(-8px);
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.achievement-card h4{
+margin-top:0;
+color:#4f46e5;
+}
+
+.achievement-card p{
+color:#444;
+line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Placements & Achievements</h1>
+<p>Empowering Students for Career Excellence</p>
+</div>
+
+<!-- PLACEMENT STATS -->
+<div class="section">
+<h2>Placement Highlights</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>85%</h3>
+<p>Overall Placement Rate</p>
+</div>
+
+<div class="stat-box">
+<h3>₹6 LPA</h3>
+<p>Highest Package</p>
+</div>
+
+<div class="stat-box">
+<h3>₹3 LPA</h3>
+<p>Average Package</p>
+</div>
+
+<div class="stat-box">
+<h3>120+</h3>
+<p>Recruiting Companies</p>
+</div>
+
+</div>
+</div>
+
+<!-- RECRUITERS -->
+<div class="section">
+<h2>Top Recruiting Companies</h2>
+
+<div class="company-grid">
+
+<div class="company-card">TCS</div>
+<div class="company-card">Infosys</div>
+<div class="company-card">Wipro</div>
+<div class="company-card">HCL</div>
+<div class="company-card">Accenture</div>
+<div class="company-card">Cognizant</div>
+<div class="company-card">Zoho</div>
+<div class="company-card">Tech Mahindra</div>
+
+</div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+<h2>Student & Institutional Achievements</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+<h4>🏆 University Ranks</h4>
+<p>Students secured university ranks in academics across multiple departments.</p>
+</div>
+
+<div class="achievement-card">
+<h4>💡 Innovation & Projects</h4>
+<p>Final year students developed AI, Web, and Mobile projects with real-world impact.</p>
+</div>
+
+<div class="achievement-card">
+<h4>🎓 Competitive Exams</h4>
+<p>Students qualified in government and competitive examinations successfully.</p>
+</div>
+
+<div class="achievement-card">
+<h4>🏅 Sports & Cultural</h4>
+<p>College teams won zonal and inter-college championships in sports and arts.</p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

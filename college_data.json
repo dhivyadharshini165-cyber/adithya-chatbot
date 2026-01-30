@@ -1,0 +1,252 @@
+{
+  "college_identity": {
+    "name": "Adithya College of Arts and Science",
+    "short_name": "ACAS",
+    "established_year": 2019,
+    "trust": "Adithya Education Trust",
+    "tagline": "Building the Nation Tomorrow Through Quality Education"
+  },
+
+  "location": {
+    "address": "Sathy Rd, Kurumbapalayam, Coimbatore, Tamil Nadu – 641107, India",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "country": "India"
+  },
+
+  "contact_information": {
+    "phone_numbers": [
+      "+91 63843 63843",
+      "+91 96885 22211"
+    ],
+    "email": "principal@adithyacas.edu.in",
+    "official_website": "https://adithyacas.edu.in/"
+  },
+
+  "overview": {
+    "description": "Adithya College of Arts and Science was established in 2019 by the Adithya Education Trust with a mission to deliver comprehensive education to students who will build the nation tomorrow. The college is recognized as one of the leading Arts and Science colleges in Coimbatore, known for its vibrant campus life, academic excellence, practical exposure, and skill development."
+  },
+
+  "leadership_and_governance": {
+    "chairman": {
+      "name": "Er. C. Sukumaran",
+      "role": "Chairman",
+      "about": "Industrialist and Chairman of the Adithya Education Trust, bringing extensive industry experience to enrich academics and institutional growth."
+    },
+    "managing_trustee": {
+      "name": "Dr. K. Srinidhi Praveen Kumar",
+      "role": "Managing Trustee",
+      "about": "Visionary leader dedicated to academic excellence, inclusive educational environment, and student success."
+    },
+    "principal": {
+      "name": "Dr. Anuja",
+      "role": "Principal",
+      "about": "Leads the institution with innovation and a commitment to nurturing future leaders and scholars."
+    }
+  },
+
+  "vision_and_mission": {
+    "vision": "To shape the future of youth through higher education, equipping them with confidence, competence, and career readiness.",
+    "mission": [
+      "Deliver a unique learning experience facilitating knowledge and potential realization.",
+      "Equip students with skills through experiential learning aligned with industry and societal needs.",
+      "Develop ethical and socially responsible individuals."
+    ]
+  },
+
+  "academics_and_programs": {
+    "ug_courses": [
+      {
+        "course_name": "B.Sc Artificial Intelligence & Machine Learning",
+        "duration": "3 Years (6 Semesters)",
+        "description": "Focuses on artificial intelligence, machine learning algorithms, Python programming, and data science.",
+        "key_subjects": [
+          "Python Programming",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Data Science",
+          "Statistics"
+        ],
+        "career_roles": [
+          "Machine Learning Engineer",
+          "AI Engineer",
+          "Data Analyst",
+          "Software Developer"
+        ],
+        "why_good_today": "AI and ML are in high demand across industries, making this course future-focused and career-oriented."
+      },
+      {
+        "course_name": "B.Sc Information Technology",
+        "duration": "3 Years (6 Semesters)",
+        "description": "Covers computer systems, software development, databases, and networking.",
+        "key_subjects": [
+          "Programming",
+          "Database Management",
+          "Networking",
+          "Web Technologies"
+        ],
+        "career_roles": [
+          "Software Developer",
+          "IT Support Engineer",
+          "System Administrator"
+        ],
+        "why_good_today": "IT professionals are essential in every organization for digital operations and growth."
+      },
+      {
+        "course_name": "BBA",
+        "duration": "3 Years (6 Semesters)",
+        "description": "Focuses on business administration, management principles, and leadership.",
+        "key_subjects": [
+          "Management Principles",
+          "Marketing",
+          "Finance",
+          "Human Resources"
+        ],
+        "career_roles": [
+          "Business Executive",
+          "Management Trainee",
+          "Entrepreneur"
+        ],
+        "why_good_today": "Builds leadership and managerial skills needed in modern businesses."
+      },
+      {
+        "course_name": "B.Com",
+        "duration": "3 Years (6 Semesters)",
+        "description": "Provides strong foundation in commerce, accounting, and finance.",
+        "key_subjects": [
+          "Accounting",
+          "Business Law",
+          "Economics",
+          "Finance"
+        ],
+        "career_roles": [
+          "Accountant",
+          "Finance Executive",
+          "Banking Professional"
+        ],
+        "why_good_today": "Commerce graduates are required in finance, banking, and corporate sectors."
+      },
+      {
+        "course_name": "B.A Political Science",
+        "duration": "3 Years (6 Semesters)",
+        "description": "Studies political systems, governance, and public administration.",
+        "key_subjects": [
+          "Political Theory",
+          "Indian Constitution",
+          "Public Administration"
+        ],
+        "career_roles": [
+          "Civil Services Aspirant",
+          "Policy Analyst",
+          "Public Administration Roles"
+        ],
+        "why_good_today": "Ideal for students interested in governance, administration, and public service."
+      },
+      {
+        "course_name": "B.Sc Psychology",
+        "duration": "3 Years (6 Semesters)",
+        "description": "Focuses on human behavior, mental processes, and psychological well-being.",
+        "key_subjects": [
+          "General Psychology",
+          "Counseling Psychology",
+          "Developmental Psychology"
+        ],
+        "career_roles": [
+          "Psychology Assistant",
+          "HR Executive",
+          "Counselor Trainee"
+        ],
+        "why_good_today": "Mental health awareness is increasing, creating strong demand for psychology professionals."
+      }
+    ]
+  },
+
+  "fees_eligibility_intake": {
+    "fees": "Fees are not publicly listed. Exact details will be provided during admission counseling.",
+    "eligibility": "Eligibility criteria are based on university norms and course requirements.",
+    "intake_capacity": "Intake capacity varies by course and is finalized by the institution.",
+    "duration_policy": "UG programs follow a semester-based system."
+  },
+
+  "scholarships_and_financial_aid": {
+    "availability": "Scholarships and financial aid may be available based on merit and need.",
+    "application_process": "Details will be explained during the admission process."
+  },
+
+  "placements_and_career_support": {
+    "placement_cell": "Dedicated placement cell providing career guidance, aptitude training, and interview preparation.",
+    "recruiters": "Recruiter details are shared during placement activities.",
+    "internships": "Internship opportunities and industry exposure are encouraged."
+  },
+
+  "facilities": {
+    "library": "Well-stocked library with books, journals, and digital resources.",
+    "laboratories": "Computer labs with updated software and systems.",
+    "hostel": "Comfortable hostel facilities with safety and essential amenities.",
+    "sports": [
+      "Basketball",
+      "Football",
+      "Volleyball",
+      "Badminton",
+      "Table Tennis",
+      "Athletics"
+    ],
+    "transport": "College buses available from major areas.",
+    "wifi": "Campus-wide Wi-Fi access."
+  },
+
+  "campus_life": {
+    "culture": "Vibrant and inclusive campus environment promoting academic and personal growth.",
+    "clubs": [
+      "Technical Clubs",
+      "Cultural Clubs",
+      "Sports Clubs",
+      "Literary Clubs"
+    ],
+    "events": [
+      "Annual Day",
+      "Cultural Festivals",
+      "Technical Symposiums"
+    ],
+    "nss_and_outreach": [
+      "Blood donation camps",
+      "Cleanliness drives",
+      "Community service programs"
+    ]
+  },
+
+  "admission_process": {
+    "steps": [
+      "Online application through official website",
+      "Document verification",
+      "Admission counseling",
+      "Final enrollment"
+    ],
+    "documents_required": [
+      "Mark sheets",
+      "Transfer Certificate",
+      "ID Proof"
+    ],
+    "admission_status": "Admissions open for 2025"
+  },
+
+  "accreditation_and_rankings": {
+    "accreditation": "Details will be communicated through official college announcements.",
+    "awards": "Awards and recognitions are announced periodically."
+  },
+
+  "admission_faqs": [
+    {
+      "question": "Is online admission available?",
+      "answer": "Yes, students can apply online through the official website."
+    },
+    {
+      "question": "Does the college provide hostel facilities?",
+      "answer": "Yes, hostel facilities are available for students."
+    },
+    {
+      "question": "Are placements provided?",
+      "answer": "Career guidance and placement training are provided."
+    }
+  ]
+}

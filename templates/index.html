@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adithya College of Arts & Science</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+
+body{
+    background:#f8fafc;
+    color:#111;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(12px);
+    border-bottom:2px solid #f97316;
+}
+
+.navbar img{height:55px;}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    position:relative;
+}
+
+.navbar ul li a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:3px;
+    background:#f97316;
+    left:0;
+    bottom:-6px;
+    transition:0.3s;
+}
+
+.navbar ul li a:hover::after{
+    width:100%;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    align-items:center;
+    padding:60px;
+    background:linear-gradient(120deg,#ffffff,#fff7ed);
+}
+
+.hero-text h1{
+    font-size:48px;
+    line-height:1.2;
+}
+
+.hero-text span{
+    color:#f97316;
+}
+
+.hero-text p{
+    margin-top:20px;
+    font-size:18px;
+    color:#444;
+    max-width:90%;
+}
+
+.hero-actions{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+}
+
+.hero-actions button{
+    padding:14px 28px;
+    font-size:16px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+}
+
+.primary-btn{
+    background:#f97316;
+    color:white;
+}
+
+.secondary-btn{
+    background:#111;
+    color:white;
+}
+
+.hero-img img{
+    width:100%;
+    max-width:480px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+/* ---------- STATS ---------- */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    padding:60px;
+    background:#fff;
+}
+
+.stat{
+    background:#fff;
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.stat h2{
+    color:#f97316;
+    font-size:36px;
+}
+
+/* ---------- AI SECTION ---------- */
+.ai-section{
+    padding:80px 60px;
+    background:#111;
+    color:white;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.ai-section h2{
+    font-size:38px;
+}
+
+.ai-section p{
+    margin-top:15px;
+    font-size:17px;
+    color:#ddd;
+}
+
+/* ---------- FEATURES ---------- */
+.features{
+    padding:80px 60px;
+}
+
+.features h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.feature:hover{
+    transform:translateY(-10px);
+}
+
+/* ---------- FOOTER ---------- */
+.footer{
+    background:#000;
+    color:#ccc;
+    text-align:center;
+    padding:25px;
+}
+
+/* ---------- CHATBOT ---------- */
+.chatbot{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#f97316;
+    color:white;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    font-size:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+    <img src="/static/logo.png">
+    <ul>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/faculty">Faculty</a></li>
+        <li><a href="/facilities">Facilities</a></li>
+        <li><a href="/placements">Placements</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/apply">Apply</a></li>
+
+        <!-- ✅ ADMIN LINK (ONLY ADDITION) -->
+        <li><a href="/admin">Admin</a></li>
+    </ul>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>Future-Ready Education at <span>Adithya College Of Arts And Science</span></h1>
+        <p>
+            A next-generation institution combining academic excellence,
+            innovation, and an AI-powered digital campus experience.
+        </p>
+
+        <div class="hero-actions">
+            <button class="primary-btn" onclick="location.href='/courses'">Explore Programs</button>
+            <button class="secondary-btn" onclick="location.href='/about'">Know More</button>
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="/static/college-ai.png">
+    </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+    <div class="stat"><h2>25+</h2><p>Years of Excellence</p></div>
+    <div class="stat"><h2>40+</h2><p>Academic Programs</p></div>
+    <div class="stat"><h2>3000+</h2><p>Students</p></div>
+    <div class="stat"><h2>95%</h2><p>Placement Support</p></div>
+</div>
+
+<!-- AI SECTION -->
+<div class="ai-section">
+    <div>
+        <h2>AI-Powered College Assistant</h2>
+        <p>
+            Our intelligent chatbot assists students with admissions,
+            courses, faculty information, career guidance, and academic support
+            — available 24/7.
+        </p>
+    </div>
+    <img src="/static/ai-bot.png" width="100%">
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+    <h2>Campus Highlights</h2>
+    <div class="feature-grid">
+        <div class="feature">Smart Classrooms</div>
+        <div class="feature">Advanced Laboratories</div>
+        <div class="feature">Career Mentorship</div>
+        <div class="feature">Digital Administration</div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Adithya College of Arts & Science
+</div>
+
+<!-- CHATBOT -->
+<div class="chatbot" onclick="location.href='/chatbot'">💬</div>
+
+</body>
+</html>

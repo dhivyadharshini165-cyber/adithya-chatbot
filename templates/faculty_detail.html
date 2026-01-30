@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{ f.designation }} | Adithya College</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+body{
+background:#eef2ff;
+margin:0;
+font-family:Segoe UI, Arial;
+}
+
+.profile-container{
+max-width:1000px;
+margin:60px auto;
+background:white;
+border-radius:24px;
+box-shadow:0 25px 50px rgba(0,0,0,0.25);
+overflow:hidden;
+}
+
+.profile-header{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+padding:40px;
+align-items:center;
+}
+
+.profile-img{
+flex:1;
+min-width:260px;
+}
+
+.profile-img img{
+width:100%;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-info{
+flex:2;
+}
+
+.profile-info h1{
+margin:0;
+color:#4f46e5;
+font-size:32px;
+}
+
+.profile-info h3{
+margin:10px 0;
+color:#555;
+font-weight:500;
+}
+
+.profile-info p{
+font-size:16px;
+margin:8px 0;
+}
+
+.badges{
+margin-top:15px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 16px;
+margin:5px;
+background:#e0e7ff;
+color:#3730a3;
+border-radius:20px;
+font-size:14px;
+font-weight:600;
+}
+
+.section{
+padding:40px;
+border-top:1px solid #e5e7eb;
+}
+
+.section h2{
+color:#0f172a;
+margin-bottom:15px;
+}
+
+.section p{
+font-size:16px;
+line-height:1.7;
+color:#444;
+}
+
+/* Achievement Cards */
+.achievement-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:25px;
+}
+
+.achievement-card{
+background:#f9fafb;
+padding:25px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+transition:0.4s;
+}
+
+.achievement-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.achievement-card h4{
+margin:0 0 10px;
+color:#4f46e5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="profile-container">
+
+<!-- HEADER -->
+<div class="profile-header">
+
+<div class="profile-img">
+<img src="{{ url_for('static', filename='images/' + f.image) }}">
+</div>
+
+<div class="profile-info">
+<h1>{{ f.name }}</h1>
+<h3>{{ f.designation }}</h3>
+
+<p><b>Qualification:</b> {{ f.qualification }}</p>
+<p><b>Experience:</b> {{ f.experience }}</p>
+
+<div class="badges">
+<span class="badge">Academic Excellence</span>
+<span class="badge">Research Oriented</span>
+<span class="badge">Student Mentor</span>
+</div>
+</div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<h2>About</h2>
+<p>
+{{ f.name }} serves as {{ f.designation }} at Adithya College of Arts and Science.
+With strong academic expertise and professional experience, they contribute
+significantly to teaching quality, curriculum development, and student success.
+</p>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+<h2>Key Achievements</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+<h4>🏆 Academic Recognition</h4>
+<p>{{ f.achievements }}</p>
+</div>
+
+<div class="achievement-card">
+<h4>📚 Research & Publications</h4>
+<p>Published research papers in reputed journals and conferences.</p>
+</div>
+
+<div class="achievement-card">
+<h4>🎓 Student Mentorship</h4>
+<p>Guided students in projects, internships, and career development.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

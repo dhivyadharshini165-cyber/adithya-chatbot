@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses | Adithya College</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+.course-select{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.course-card{
+width:250px;
+padding:30px;
+background:white;
+border-radius:16px;
+text-align:center;
+text-decoration:none;
+color:#0f172a;
+font-weight:600;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transition:0.4s;
+cursor:pointer;
+}
+
+.course-card:hover{
+transform:translateY(-12px) scale(1.05);
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.course-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.course-box{
+padding:25px;
+background:white;
+border-radius:14px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.course-box:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.course-box a{
+text-decoration:none;
+color:#4f46e5;
+font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Our Courses</h1>
+<p>Select Programme & View Details</p>
+</div>
+
+<div class="section">
+
+<!-- UG / PG BUTTONS -->
+<div class="course-select">
+<div class="course-card" onclick="showUG()">🎓 Undergraduate</div>
+<div class="course-card" onclick="showPG()">📘 Postgraduate</div>
+</div>
+
+<!-- UG COURSES -->
+<div id="ug" style="display:none;">
+<h2 style="margin-top:40px;">Undergraduate Programmes</h2>
+
+<div class="course-list">
+<div class="course-box"><a href="/course/ai-ml">B.Sc AI & ML</a></div>
+<div class="course-box"><a href="/course/it">B.Sc Information Technology</a></div>
+<div class="course-box"><a href="/course/cs">B.Sc Computer Science</a></div>
+<div class="course-box"><a href="/course/psychology">B.Sc Psychology</a></div>
+<div class="course-box"><a href="/course/bcom">B.Com</a></div>
+<div class="course-box"><a href="/course/bba">BBA</a></div>
+</div>
+</div>
+
+<!-- PG COURSES -->
+<div id="pg" style="display:none;">
+<h2 style="margin-top:40px;">Postgraduate Programmes</h2>
+
+<div class="course-list">
+<div class="course-box"><a href="/course/msc-cs">M.Sc Computer Science</a></div>
+<div class="course-box"><a href="/course/msc-it">M.Sc Information Technology</a></div>
+<div class="course-box"><a href="/course/mcom">M.Com</a></div>
+<div class="course-box"><a href="/course/mba">MBA</a></div>
+</div>
+</div>
+
+</div>
+
+<script>
+function showUG(){
+document.getElementById("ug").style.display="block";
+document.getElementById("pg").style.display="none";
+}
+</script>
+
+<script>
+function showPG(){
+document.getElementById("pg").style.display="block";
+document.getElementById("ug").style.display="none";
+}
+</script>
+
+</body>
+</html>

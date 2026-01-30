@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Application Slip | Adithya College</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+font-family:Segoe UI, Arial;
+background:#f4f6f8;
+padding:40px;
+}
+
+.card{
+max-width:700px;
+margin:auto;
+border:2px solid #4f46e5;
+border-radius:18px;
+padding:35px;
+background:white;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.header{
+text-align:center;
+margin-bottom:20px;
+}
+
+.header h2{
+color:#4f46e5;
+margin-bottom:5px;
+}
+
+.header p{
+font-size:14px;
+color:#555;
+}
+
+.details p{
+margin:8px 0;
+font-size:15px;
+}
+
+.footer{
+margin-top:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.print-btn{
+background:#16a34a;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+cursor:pointer;
+font-size:15px;
+}
+
+.exit-btn{
+background:#dc2626;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+cursor:pointer;
+font-size:15px;
+}
+
+@media print{
+.print-btn,
+.exit-btn{
+display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="header">
+<h2>Adithya College of Arts & Science</h2>
+<p>Approved by University | Accredited Institution</p>
+<hr>
+</div>
+
+<div class="details">
+<p><b>Application ID:</b> {{ app.application_id }}</p>
+<p><b>Name:</b> {{ app.name }}</p>
+<p><b>Email:</b> {{ app.email }}</p>
+<p><b>Mobile:</b> {{ app.phone }}</p>
+<p><b>Programme:</b> {{ app.program }}</p>
+<p><b>Course Applied:</b> {{ app.course }}</p>
+<p><b>Qualification:</b> {{ app.qualification }}</p>
+<p><b>Percentage / CGPA:</b> {{ app.percentage }}</p>
+<p><b>Date:</b> {{ app.date }} | {{ app.time }}</p>
+</div>
+
+<div class="footer">
+<p><b>Signature of Applicant</b></p>
+
+<div>
+<button class="print-btn" onclick="printSlip()">Print / Save as PDF</button>
+<button class="exit-btn" onclick="exitSlip()">Exit</button>
+</div>
+</div>
+
+</div>
+
+<script>
+function printSlip(){
+    window.print();
+
+    // ✅ AUTO REDIRECT AFTER PRINT
+    setTimeout(() => {
+        window.location.href = "/dashboard";
+    }, 2000);
+}
+
+function exitSlip(){
+    if(confirm("Are you sure you want to exit?")){
+        window.location.href = "/dashboard";
+    }
+}
+</script>
+
+</body>
+</html>

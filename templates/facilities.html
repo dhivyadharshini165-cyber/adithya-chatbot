@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Facilities | Adithya College</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI, Arial;
+background:#f5f7fb;
+}
+
+/* HERO */
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#020617,#4f46e5);
+color:white;
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* SECTION */
+.section{
+max-width:1200px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.section h2{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+color:#0f172a;
+}
+
+/* FACILITY GRID */
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.facility-card{
+background:white;
+padding:30px;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.facility-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#6366f1,#0ea5e9);
+}
+
+.facility-card:hover{
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.facility-card h3{
+margin-top:10px;
+color:#4f46e5;
+}
+
+.facility-card p{
+color:#444;
+line-height:1.6;
+margin-top:10px;
+}
+
+/* ICON */
+.icon{
+font-size:36px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Our Facilities</h1>
+<p>Supporting Academic Excellence & Student Life</p>
+</div>
+
+<!-- FACILITIES -->
+<div class="section">
+<h2>Campus Infrastructure & Facilities</h2>
+
+<div class="facility-grid">
+
+<div class="facility-card">
+<div class="icon">💻</div>
+<h3>Computer Laboratories</h3>
+<p>
+High-speed internet enabled computer labs with updated software, AI tools, 
+and programming environments for practical learning.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">📚</div>
+<h3>Library & Digital Resources</h3>
+<p>
+Well-stocked library with academic books, journals, research papers, 
+e-books, and online learning platforms.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">🏫</div>
+<h3>Smart Classrooms</h3>
+<p>
+Technology-enabled classrooms with projectors, smart boards, 
+and audio-visual tools for effective teaching.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">⚽</div>
+<h3>Sports & Recreation</h3>
+<p>
+Indoor and outdoor sports facilities including cricket, football, volleyball, 
+and fitness activities for physical development.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">🧪</div>
+<h3>Science & Research Labs</h3>
+<p>
+Modern laboratories for science, psychology, and research-based learning 
+with safety standards.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">🍽️</div>
+<h3>Cafeteria</h3>
+<p>
+Hygienic cafeteria providing nutritious food, snacks, and refreshments 
+for students and staff.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">🚌</div>
+<h3>Transport Facility</h3>
+<p>
+College bus services covering major routes for safe and convenient 
+transportation of students.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">🏥</div>
+<h3>Health & First Aid</h3>
+<p>
+Basic medical facilities and first aid support available on campus 
+for student safety.
+</p>
+</div>
+
+<div class="facility-card">
+<div class="icon">🔐</div>
+<h3>Campus Security</h3>
+<p>
+24/7 security surveillance with CCTV cameras ensuring a safe and secure 
+learning environment.
+</p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

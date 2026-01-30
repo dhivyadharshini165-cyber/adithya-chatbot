@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty | Adithya College</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+.faculty-section{
+padding:50px;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.faculty-card{
+background:white;
+border-radius:18px;
+padding:30px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transition:0.4s;
+text-decoration:none;
+color:#0f172a;
+}
+
+.faculty-card:hover{
+transform:translateY(-12px) scale(1.05);
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.faculty-icon{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.faculty-title{
+font-size:20px;
+font-weight:700;
+margin-bottom:10px;
+color:#4f46e5;
+}
+
+.faculty-desc{
+font-size:15px;
+color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Our Faculty</h1>
+<p>Meet Our Academic Leaders & Teaching Experts</p>
+</div>
+
+<div class="section faculty-section">
+
+<div class="faculty-grid">
+
+<a href="/faculty/principal" class="faculty-card">
+<div class="faculty-icon">🎓</div>
+<div class="faculty-title">Principal</div>
+<div class="faculty-desc">
+Head of the Institution & Academic Leadership
+</div>
+</a>
+
+<a href="/faculty/hod" class="faculty-card">
+<div class="faculty-icon">📘</div>
+<div class="faculty-title">Heads of Department</div>
+<div class="faculty-desc">
+Department Leadership & Research Guidance
+</div>
+</a>
+
+<a href="/faculty/staff" class="faculty-card">
+<div class="faculty-icon">👩‍🏫</div>
+<div class="faculty-title">Faculty Members</div>
+<div class="faculty-desc">
+Experienced Professors & Subject Experts
+</div>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{course.name}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{font-family:Arial;background:#eef2ff;margin:0;padding:20px;}
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+img{width:100%;max-height:300px;object-fit:cover;border-radius:15px;}
+h1{color:#4f46e5;}
+.info{margin-top:20px;font-size:16px;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<img src="/static/images/{{course.image}}">
+<h1>{{course.name}}</h1>
+
+<div class="info">
+<p><b>Duration:</b> {{course.duration}}</p>
+<p><b>Career Opportunities:</b> {{course.career}}</p>
+<p><b>Description:</b> {{course.description}}</p>
+</div>
+</div>
+
+</body>
+</html>

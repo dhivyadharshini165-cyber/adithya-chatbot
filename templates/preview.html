@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Application Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+font-family:Arial;
+background:#eef2ff;
+display:flex;
+justify-content:center;
+padding:30px;
+}
+.box{
+background:white;
+width:400px;
+padding:25px;
+border-radius:15px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+button{
+width:100%;
+padding:10px;
+margin-top:15px;
+background:#4f46e5;
+color:white;
+border:none;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="data"></div>
+
+<script>
+let a = JSON.parse(localStorage.getItem("lastApp"));
+
+data.innerHTML = `
+<h3>Application Preview</h3>
+<p><b>Name:</b> ${a.name}</p>
+<p><b>Email:</b> ${a.email}</p>
+<p><b>Phone:</b> ${a.phone}</p>
+<p><b>Course:</b> ${a.course}</p>
+<p><b>Date:</b> ${a.date}</p>
+<button onclick="location.href='/slip'">Download / Print</button>
+`;
+</script>
+
+</body>
+</html>
