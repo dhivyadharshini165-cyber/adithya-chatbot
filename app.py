@@ -183,6 +183,125 @@ def ug_courses():
 def pg_courses():
     return render_template("pg.html", pg=college["pg_courses"])
 
+@app.route("/course/<course_name>")
+def course_detail(course_name):
+    courses = {
+        "ai-ml": {
+            "name": "B.Sc Artificial Intelligence & Machine Learning",
+            "duration": "3 Years",
+            "career": "AI Engineer, Data Scientist, ML Engineer",
+            "image": "ai_ml.jpg",
+            "description": "AI & ML focuses on intelligent systems, data analytics, automation, and future technologies."
+        },
+        "it": {
+            "name": "B.Sc Information Technology",
+            "duration": "3 Years",
+            "career": "Software Developer, System Analyst, IT Support",
+            "image": "it.jpg",
+            "description": "Information Technology deals with software, networks, databases and system administration."
+        },
+        "cs": {
+            "name": "B.Sc Computer Science",
+            "duration": "3 Years",
+            "career": "Programmer, Web Developer, Software Engineer",
+            "image": "cs.jpg",
+            "description": "Computer Science focuses on programming, algorithms, databases and operating systems."
+        },
+        "psychology": {
+            "name": "B.Sc Psychology",
+            "duration": "3 Years",
+            "career": "Counselor, HR Specialist, Clinical Assistant",
+            "image": "psychology.jpg",
+            "description": "Psychology studies human behavior, mental processes and emotional development."
+        },
+        "bcom": {
+            "name": "B.Com",
+            "duration": "3 Years",
+            "career": "Accountant, Auditor, Financial Analyst",
+            "image": "bcom.jpg",
+            "description": "Commerce focuses on accounting, finance, taxation and business management."
+        },
+        "bba": {
+            "name": "BBA",
+            "duration": "3 Years",
+            "career": "Business Analyst, Manager, Entrepreneur",
+            "image": "bba.jpg",
+            "description": "BBA develops leadership, management, marketing and entrepreneurial skills."
+        },
+        "msc-cs": {
+            "name": "M.Sc Computer Science",
+            "duration": "2 Years",
+            "career": "Software Engineer, Researcher, Lecturer",
+            "image": "msc_cs.jpg",
+            "description": "Advanced computer science with research, AI and system design."
+        },
+        "msc-it": {
+            "name": "M.Sc Information Technology",
+            "duration": "2 Years",
+            "career": "IT Manager, Cloud Engineer",
+            "image": "msc_it.jpg",
+            "description": "Advanced IT, networking, cloud computing and security."
+        },
+        "mcom": {
+            "name": "M.Com",
+            "duration": "2 Years",
+            "career": "Accountant, Auditor, Lecturer",
+            "image": "mcom.jpg",
+            "description": "Advanced studies in commerce, finance and accounting."
+        },
+        "mba": {
+            "name": "MBA",
+            "duration": "2 Years",
+            "career": "Manager, HR, Business Consultant",
+            "image": "mba.jpg",
+            "description": "Management programme focusing on leadership and strategy."
+        }
+    }
+
+    return render_template("course_detail.html", course=courses[course_name])
+
+@app.route("/faculty")
+def faculty():
+    return render_template("faculty.html")
+
+@app.route("/faculty/<role>")
+def faculty_detail(role):
+    data = {
+        "principal": {
+            "name": "Dr. R. Anuja",
+            "designation": "Principal",
+            "qualification": "Ph.D",
+            "experience": "20+ Years",
+            "image": "principal.jpg",
+            "achievements": "Academic Excellence Award, Research Publications"
+        },
+        "hod": {
+            "name": "Dr.naveen kumar",
+            "designation": "HOD - AI & ML",
+            "qualification": "Ph.D in AI",
+            "experience": "15 Years",
+            "image": "hod_ai.jpg",
+            "achievements": "AI Research Lead, IEEE Member"
+        },
+        "staff": {
+            "name": "ms.swetha",
+            "designation": "Assistant Professors",
+            "qualification": "M.Sc / M.Tech",
+            "experience": "5–10 Years",
+            "image": "staff1.jpg",
+            "achievements": "Industry Certified, Project Mentors"
+        }
+    }
+
+    return render_template("faculty_detail.html", f=data[role])
+
+@app.route("/Placements")
+def Placements():
+    return render_template("Placements.html")
+
+@app.route("/About")
+def Abouts():
+    return render_template("About.html")
 # ---------------- APPLICATION ----------------
 @app.route("/apply")
 def apply():
@@ -295,6 +414,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
