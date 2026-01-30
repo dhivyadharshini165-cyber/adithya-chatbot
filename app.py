@@ -171,6 +171,14 @@ def index():
 def dashboard():
     return render_template("index.html")
 
+@app.route("/Placements")
+def Placements():
+    return render_template("Placements.html")
+
+@app.route("/About")
+def Abouts():
+    return render_template("About.html")
+
 @app.route("/courses")
 def courses():
     return render_template("courses.html")
@@ -294,14 +302,6 @@ def faculty_detail(role):
     }
 
     return render_template("faculty_detail.html", f=data[role])
-
-@app.route("/Placements")
-def Placements():
-    return render_template("Placements.html")
-
-@app.route("/About")
-def Abouts():
-    return render_template("About.html")
 # ---------------- APPLICATION ----------------
 @app.route("/apply")
 def apply():
@@ -414,6 +414,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
