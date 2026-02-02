@@ -409,16 +409,16 @@ def course_status_update(course, status):
     if not session.get("admin"):
         return redirect("/admin")
 
-if not os.path.exists(COURSE_STATUS_FILE):
-    data = {}
-else:
-    with open(COURSE_STATUS_FILE, "r") as f:
-        data = json.load(f)
+    if not os.path.exists(COURSE_STATUS_FILE):
+        data = {}
+    else:
+        with open(COURSE_STATUS_FILE, "r") as f:
+            data = json.load(f)
 
-data[course] = status
+    data[course] = status
 
-with open(COURSE_STATUS_FILE, "w") as f:
-    json.dump(data, f)
+    with open(COURSE_STATUS_FILE, "w") as f:
+        json.dump(data, f)
 
     return redirect("/admin-dashboard")
 
@@ -430,6 +430,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
