@@ -172,17 +172,17 @@ def index():
 def dashboard():
     return render_template("index.html")
 
-@app.route("/Placements")
-def Placements():
-    return render_template("Placements.html")
+@app.route("/placements")
+def placements():
+    return render_template("placements.html")
 
-@app.route("/About")
-def Abouts():
-    return render_template("About.html")
+@app.route("/about")
+def abouts():
+    return render_template("about.html")
 
-@app.route("/Facilities")
-def Facilities():
-    return render_template("Facilities.html")
+@app.route("/facilities")
+def facilities():
+    return render_template("facilities.html")
 
 @app.route("/courses")
 def courses():
@@ -419,6 +419,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
