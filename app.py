@@ -321,14 +321,17 @@ def submit_application():
 
     course = data.get("course")
 
-if not os.path.exists(COURSE_STATUS_FILE):
-    course_status = {}
-else:
-    with open(COURSE_STATUS_FILE, "r") as f:
-        course_status = json.load(f)
+    if not os.path.exists(COURSE_STATUS_FILE):
+        course_status = {}
+    else:
+        with open(COURSE_STATUS_FILE, "r") as f:
+            course_status = json.load(f)
 
     if course_status.get(course) == "full":
-        return render_template("apply.html", error=f"{course} admissions are FULL.")
+        return render_template(
+            "apply.html",
+            error=f"{course} admissions are FULL."
+        )
 
     if not os.path.exists("data/applications.json"):
         with open("data/applications.json", "w") as f:
@@ -427,6 +430,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
