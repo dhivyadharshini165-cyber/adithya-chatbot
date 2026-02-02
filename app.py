@@ -41,7 +41,7 @@ def chatbot_reply(user_msg, session, college):
                         "You are the official AI Admission & Information Assistant of"
 "Adithya College of Arts and Science (ACAS), Coimbatore."
 OFFICIAL COLLEGE DATA (USE THIS ONLY):
-{college_data_text}                  
+{college_data.json}                  
 
 "CRITICAL DATA RULE:"
 "- Use ONLY the information provided in the official college_data.json."
@@ -180,6 +180,10 @@ def Placements():
 @app.route("/About")
 def Abouts():
     return render_template("About.html")
+
+@app.route("/Facilities")
+def Facilities():
+    return render_template("Facilities.html")
 
 @app.route("/courses")
 def courses():
@@ -416,6 +420,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
