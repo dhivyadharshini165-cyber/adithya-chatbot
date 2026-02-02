@@ -320,7 +320,8 @@ def submit_application():
     data["time"] = now.strftime("%I:%M %p")
 
     course = data.get("course")
-    if not os.path.exists(COURSE_STATUS_FILE):
+
+if not os.path.exists(COURSE_STATUS_FILE):
     course_status = {}
 else:
     with open(COURSE_STATUS_FILE, "r") as f:
@@ -406,14 +407,15 @@ def course_status_update(course, status):
         return redirect("/admin")
 
     if not os.path.exists(COURSE_STATUS_FILE):
-    course_status = {}
+    data = {}
 else:
     with open(COURSE_STATUS_FILE, "r") as f:
-        course_status = json.load(f)
+        data = json.load(f)
 
-    data[course] = status
-    with open(COURSE_STATUS_FILE, "w") as f:
-        json.dump(data, f)
+data[course] = status
+
+with open(COURSE_STATUS_FILE, "w") as f:
+    json.dump(data, f)
 
     return redirect("/admin-dashboard")
 
@@ -425,6 +427,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
