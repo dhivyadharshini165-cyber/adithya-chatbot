@@ -382,15 +382,21 @@ def admin_dashboard():
     if not session.get("admin"):
         return redirect("/admin")
 
+    # LOAD APPLICATIONS
     if not os.path.exists("data/applications.json"):
         students = []
     else:
         with open("data/applications.json", "r") as f:
             students = json.load(f)
 
-    with open(COURSE_STATUS_FILE, "r") as f:
-        course_status = json.load(f)
+    # 🔴 PLACE IT HERE (COURSE STATUS SAFE LOAD)
+    if not os.path.exists(COURSE_STATUS_FILE):
+        course_status = {}
+    else:
+        with open(COURSE_STATUS_FILE, "r") as f:
+            course_status = json.load(f)
 
+    # COUNT PER COURSE
     counts = {}
     for s in students:
         c = s.get("course", "Unknown")
@@ -430,6 +436,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
