@@ -22,8 +22,8 @@ GROQ_API_KEY = "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"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # ===================== LOAD DATA =====================
-with open("college_data.json", "r") as f:
-    college = json.load(f)
+with open("college_data.json", "r", encoding="utf-8") as f:
+    college_data_text = f.read()
 # ===================== CHATBOT LOGIC (FIXED) =====================
 def chatbot_reply(user_msg, session, college):
     try:
@@ -37,8 +37,7 @@ def chatbot_reply(user_msg, session, college):
             "messages": [
                 {
                     "role": "system",
-                    "content": (
-                        system_prompt = f"""
+                    "content":system_prompt = f"""
 You are the official AI Admission & Information Assistant of
 Adithya College of Arts and Science (ACAS), Coimbatore.
 
@@ -143,7 +142,6 @@ You are speaking as the official representative of
 Adithya College of Arts and Science.
 """
 
-                    )
                 },
                 {"role": "user", "content": user_msg}
             ],
@@ -427,6 +425,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
