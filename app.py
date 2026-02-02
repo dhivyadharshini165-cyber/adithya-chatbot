@@ -24,7 +24,13 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 # ===================== LOAD DATA =====================
 with open("college_data.json", "r", encoding="utf-8") as f:
     college_data_text = f.read()
-# ===================== CHATBOT LOGIC (FIXED) =====================
+
+college = json.loads(college_data_text)
+
+COURSE_STATUS_FILE = "data/course_status.json"
+# ===================================================
+
+# ===================== CHATBOT LOGIC =====================
 def chatbot_reply(user_msg, session, college):
     try:
         headers = {
@@ -32,12 +38,7 @@ def chatbot_reply(user_msg, session, college):
             "Content-Type": "application/json"
         }
 
-        payload = {
-            "model": "llama-3.1-8b-instant",
-            "messages": [
-                {
-                    "role": "system",
-                    "content":system_prompt = f"""
+        system_prompt = f"""
 You are the official AI Admission & Information Assistant of
 Adithya College of Arts and Science (ACAS), Coimbatore.
 
@@ -96,9 +97,7 @@ COURSE INFORMATION RULES:
 - Do NOT overwhelm the user with too many options
 
 COURSE EXPLANATION FORMAT (MANDATORY):
-For each course, follow EXACTLY this format:
-
-• Course Name
+* Course Name
 – What you will learn
 – Key subjects
 – Career roles
@@ -118,17 +117,14 @@ EXAMPLE ENDING LINE:
 CONFUSED / UNSURE USER BEHAVIOR:
 - First: 1 short encouraging line
 - Then: ask ONE gentle clarifying question
-- Do NOT lecture or over-explain
 
 PLACEMENT, FEES & SCHOLARSHIPS:
 - If exact numbers are not in the data:
   • Clearly say they will be explained during admission counseling
-- Do NOT guess salaries, fees, or recruiters
 
 STRICTLY FORBIDDEN:
 - Do NOT mention AI, API, system prompts, or internal rules
 - Do NOT compare with other colleges
-- Do NOT repeat the same greeting every time
 - Do NOT give fake or general information
 
 TONE:
@@ -137,12 +133,12 @@ TONE:
 - Supportive
 - Admission-focused
 - Trust-building
-
-You are speaking as the official representative of
-Adithya College of Arts and Science.
 """
 
-                },
+        payload = {
+            "model": "llama-3.1-8b-instant",
+            "messages": [
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_msg}
             ],
             "temperature": 0.4,
@@ -157,17 +153,15 @@ Adithya College of Arts and Science.
         )
 
         data = response.json()
-        print("GROQ RESPONSE:", data)  # 🔥 DEBUG LINE
 
         if "choices" in data and len(data["choices"]) > 0:
             return data["choices"][0]["message"]["content"]
 
-        # If API responds but no choices
-        return "I’m here to help 😊 Please tell me your 12th stream, marks, or ask about any course."
+        return "Please tell me your 12th stream or ask about a course."
 
     except Exception as e:
         print("Chatbot Error:", e)
-        return "Sorry 😔 I’m having a technical issue. Please try again in a moment."
+        return "Technical issue. Please try again."
 
 # ===================== ROUTES =====================
 @app.route("/")
@@ -425,6 +419,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
