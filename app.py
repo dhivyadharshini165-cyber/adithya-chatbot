@@ -406,7 +406,7 @@ def course_status_update(course, status):
     if not session.get("admin"):
         return redirect("/admin")
 
-    if not os.path.exists(COURSE_STATUS_FILE):
+if not os.path.exists(COURSE_STATUS_FILE):
     data = {}
 else:
     with open(COURSE_STATUS_FILE, "r") as f:
@@ -427,6 +427,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
