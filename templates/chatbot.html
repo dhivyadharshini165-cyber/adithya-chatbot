@@ -57,6 +57,7 @@ function send(e){
 if(e.key==="Enter"){
 let msg=input.value;
   if(msg === "") return;
+  
 chat.innerHTML+=`<div class='user'>${msg}</div>`;
 fetch("/chat",{
 method:"POST",
@@ -75,5 +76,6 @@ input.value="";
 </script>
 </body>
 </html>
+
 
 
