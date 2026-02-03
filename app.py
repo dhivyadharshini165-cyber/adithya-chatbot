@@ -369,7 +369,6 @@ def chat():
 
     reply = chatbot_reply(user_msg, session, college)
     return jsonify({"reply": reply})
-
 # ===================== ADMIN =====================
 ADMIN_USERNAME = "admin"
 ADMIN_PASSWORD = "admin123"
@@ -441,6 +440,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
