@@ -355,13 +355,18 @@ def application_slip():
     return render_template("slip.html", app=apps[-1])
 
 # ===================== CHATBOT =====================
-@app.route("/chatbot")
-def chatbot():
-    return render_template("chatbot.html")
-
 @app.route("/chat", methods=["POST"])
 def chat():
-    user_msg = request.json.get("message", "")
+    data = request.get_json(silent=True)
+
+    if not data or "message" not in data:
+        return jsonify({"reply": "Please type your question clearly."})
+
+    user_msg = data["message"].strip()
+
+    if not user_msg:
+        return jsonify({"reply": "Please type your question clearly."})
+
     reply = chatbot_reply(user_msg, session, college)
     return jsonify({"reply": reply})
 
@@ -436,6 +441,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
