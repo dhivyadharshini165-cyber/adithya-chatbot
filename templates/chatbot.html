@@ -80,7 +80,7 @@ function send(e){
 
         chat.innerHTML += `<div class="user">${msg}</div>`;
 
-        fetch(window.location.origin + "/chatbot", {
+        fetch(window.location.origin + "/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -105,4 +105,5 @@ function send(e){
 
 </body>
 </html>
+
 
