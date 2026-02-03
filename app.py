@@ -300,7 +300,7 @@ def faculty_detail(role):
             "name": "Dr. Naveen Kumar",
             "designation": "HOD – AI & ML",
             "qualification": "Ph.D in AI",
-            "experience": "15 Years",
+            "experience": "3 Years",
             "image": "hod_naveen.jpg",
             "achievements": "AI Research Lead, IEEE Member"
         },
@@ -309,7 +309,7 @@ def faculty_detail(role):
             "name": "Gayathri",
             "designation": "HOD – English",
             "qualification": "M.A, M.Phil",
-            "experience": "10 Years",
+            "experience": "3 Years",
             "image": "hod_gayathri.jpg",
             "achievements": "Language & Communication Expert"
         },
@@ -495,6 +495,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
