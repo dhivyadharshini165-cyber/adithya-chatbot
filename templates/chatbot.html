@@ -60,6 +60,7 @@ chat.innerHTML+=`<div class='user'>${msg}</div>`;
 fetch("/chat",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
+credentials: "same-origin",  
 body:JSON.stringify({message:msg})
 })
 .then(res=>res.json())
@@ -73,3 +74,4 @@ input.value="";
 </script>
 </body>
 </html>
+
