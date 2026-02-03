@@ -284,6 +284,8 @@ def faculty():
 @app.route("/faculty/<role>")
 def faculty_detail(role):
     data = {
+
+        # ---------------- PRINCIPAL ----------------
         "principal": {
             "name": "Dr. R. Anuja",
             "designation": "Principal",
@@ -292,21 +294,70 @@ def faculty_detail(role):
             "image": "principal.jpg",
             "achievements": "Academic Excellence Award, Research Publications"
         },
-        "hod": {
-            "name": "Dr.naveen kumar",
-            "designation": "HOD - AI & ML",
+
+        # ---------------- HODs ----------------
+        "hod_naveen": {
+            "name": "Dr. Naveen Kumar",
+            "designation": "HOD – AI & ML",
             "qualification": "Ph.D in AI",
             "experience": "15 Years",
-            "image": "hod_ai.jpg",
+            "image": "hod_naveen.jpg",
             "achievements": "AI Research Lead, IEEE Member"
         },
-        "staff": {
-            "name": "ms.swetha",
-            "designation": "Assistant Professors",
-            "qualification": "M.Sc / M.Tech",
-            "experience": "5–10 Years",
-            "image": "staff1.jpg",
-            "achievements": "Industry Certified, Project Mentors"
+
+        "hod_gayathri": {
+            "name": "Gayathri",
+            "designation": "HOD – English",
+            "qualification": "M.A, M.Phil",
+            "experience": "10 Years",
+            "image": "hod_gayathri.jpg",
+            "achievements": "Language & Communication Expert"
+        },
+
+        # ---------------- STAFF MEMBERS ----------------
+        "staff_ramya": {
+            "name": "Ramya",
+            "designation": "Assistant Professor",
+            "qualification": "M.Sc",
+            "experience": "6 Years",
+            "image": "staff_ramya.jpg",
+            "achievements": "Student Mentoring & Academic Support"
+        },
+
+        "staff_swethavarshini": {
+            "name": "Swethavarshini",
+            "designation": "Assistant Professor",
+            "qualification": "M.Sc",
+            "experience": "5 Years",
+            "image": "staff_swethavarshini.jpg",
+            "achievements": "Curriculum Development"
+        },
+
+        "staff_legha": {
+            "name": "Legha",
+            "designation": "Assistant Professor",
+            "qualification": "M.Sc",
+            "experience": "4 Years",
+            "image": "staff_legha.jpg",
+            "achievements": "Project Guidance"
+        },
+
+        "staff_praveena": {
+            "name": "Praveena",
+            "designation": "Assistant Professor",
+            "qualification": "M.Tech",
+            "experience": "7 Years",
+            "image": "staff_praveena.jpg",
+            "achievements": "Industry-Oriented Teaching"
+        },
+
+        "staff_sowmiya": {
+            "name": "Sowmiya",
+            "designation": "Assistant Professor",
+            "qualification": "M.Sc",
+            "experience": "3 Years",
+            "image": "staff_sowmiya.jpg",
+            "achievements": "Student Counseling"
         }
     }
 
@@ -444,6 +495,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
