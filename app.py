@@ -409,6 +409,10 @@ def application_slip():
         apps = json.load(f)
     return render_template("slip.html", app=apps[-1])
 
+@app.route("/slip")
+def slip():
+    return render_template("slip.html")
+
 # ===================== CHATBOT =====================
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -495,6 +499,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
