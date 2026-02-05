@@ -376,6 +376,8 @@ def submit_application():
 
     course = data.get("course")
 
+    os.makedirs("data", exist_ok=True)
+
     if not os.path.exists(COURSE_STATUS_FILE):
         course_status = {}
     else:
@@ -499,6 +501,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
