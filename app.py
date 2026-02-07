@@ -18,7 +18,7 @@ def add_no_cache_headers(response):
 # ===========================================================
 
 # ===================== GROQ API =====================
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # ===================== LOAD DATA =====================
@@ -501,6 +501,7 @@ def logout():
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
