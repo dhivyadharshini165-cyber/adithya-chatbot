@@ -498,9 +498,35 @@ def logout():
     session.clear()
     return redirect("/admin")
 
+@app.route("/delete-application/<int:index>")
+def delete_application(index):
+    if not session.get("admin"):
+        return redirect("/admin")
+
+    file_path = "data/applications.json"
+
+    if not os.path.exists(file_path):
+        return redirect("/admin-dashboard")
+
+    with open(file_path, "r") as f:
+        applications = json.load(f)
+
+    # SAFETY CHECK
+    if index < 0 or index >= len(applications):
+        return redirect("/admin-dashboard")
+
+    # DELETE KNOW
+    applications.pop(index)
+
+    with open(file_path, "w") as f:
+        json.dump(applications, f, indent=4)
+
+    return redirect("/admin-dashboard")
+
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
