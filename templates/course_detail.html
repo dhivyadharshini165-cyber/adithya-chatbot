@@ -23,7 +23,7 @@ h1{color:#4f46e5;}
 <body>
 
 <div class="container">
-<img src="/static/images/{{course.image}}">
+<img src="{{ url_for('static', filename='images/' + course.image) }}">
 <h1>{{course.name}}</h1>
 
 <div class="info">
@@ -35,3 +35,4 @@ h1{color:#4f46e5;}
 
 </body>
 </html>
+
