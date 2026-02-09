@@ -291,7 +291,7 @@ def faculty_detail(role):
             "designation": "Principal",
             "qualification": "Ph.D",
             "experience": "20+ Years",
-            "image": "principal.jpg",
+            "image": "Principal.jpg",
             "achievements": "Academic Excellence Award, Research Publications"
         },
 
@@ -526,6 +526,7 @@ def delete_application(index):
 # ===================== RUN =====================
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
