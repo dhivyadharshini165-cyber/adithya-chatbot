@@ -10,7 +10,7 @@
 
 body{
     background:#f8fafc;
-    color:#111;
+    color:white;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -21,13 +21,16 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 50px;
-    background:rgba(255,255,255,0.9);
+    padding:25px 50px;
+    background:#000;
     backdrop-filter:blur(12px);
     border-bottom:2px solid #f97316;
 }
 
-.navbar img{height:55px;}
+.navbar img{
+    height:75px;   /* increase logo size */
+    width:auto;
+}
 
 .navbar ul{
     list-style:none;
@@ -37,7 +40,7 @@ body{
 
 .navbar ul li a{
     text-decoration:none;
-    color:#111;
+    color:white;
     font-weight:600;
     position:relative;
 }
@@ -199,21 +202,20 @@ body{
 }
 
 /* ---------- CHATBOT ---------- */
-.chatbot{
+.chatbot-img{
     position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#f97316;
-    color:white;
-    width:65px;
-    height:65px;
+    bottom:25px;
+    right:25px;
+    width:70px;
+    height:70px;
     border-radius:50%;
-    font-size:28px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     cursor:pointer;
-    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.chatbot-img:hover{
+    transform:scale(1.1);
 }
 </style>
 </head>
@@ -294,7 +296,10 @@ body{
 </div>
 
 <!-- CHATBOT -->
-<div class="chatbot" onclick="location.href='/chatbot'">💬</div>
+<a href="/chatbot">
+    <img src="/static/ai-bot.png" class="chatbot-img">
+</a>
 
 </body>
 </html>
+
